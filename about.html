@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Cedar Pharmacy - Minneapolis Community Healthcare</title>
+  <meta name="description" content="Learn about Cedar Pharmacy, our dedicated pharmacist team, mission, values, and patient-centered approach to healthcare at 417 Cedar Ave, Minneapolis.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#092E96',
+              hover: '#061F69',
+              light: '#EEF4FF',
+              subtle: '#F6F9FF',
+              50: '#F0F5FF',
+              100: '#E0EBFF',
+              600: '#0B36B3',
+              700: '#092E96',
+              800: '#061F69',
+              900: '#041547'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen selection:bg-brand-100 selection:text-brand-900">
+
+  <!-- TOP UTILITY / ANNOUNCEMENT BAR -->
+  <aside class="bg-slate-900 text-slate-300 text-xs border-b border-slate-800 py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 text-slate-300">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          417 Cedar Ave, Minneapolis, MN 55454
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <a href="tel:+16123543851" class="hidden sm:inline-flex items-center gap-1.5 hover:text-white transition-colors">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          +1 612-354-3851
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-soft-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand rounded-xl p-1">
+        <img 
+          src="assets/images/ceder_logo_png.png" 
+          alt="Cedar Pharmacy" 
+          class="h-10 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-[1.02]"
+        >
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="refill.html" class="nav-link">Refill</a>
+      </nav>
+
+      <!-- Desktop Action CTAs -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:+16123543851" class="btn-secondary px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-soft-sm">
+          <svg class="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          (612) 354-3851
+        </a>
+        <a href="refill.html" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-soft">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+          Refill Prescription
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-900/40 z-50 hidden opacity-0 transition-opacity duration-200"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
+    <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="assets/images/ceder_logo_png.png" alt="Cedar Pharmacy" class="h-9 w-auto object-contain rounded-lg">
+      </div>
+      <button id="mobile-menu-close" type="button" aria-label="Close Navigation Menu" class="p-2 text-slate-400 hover:text-slate-700">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <div class="p-6 flex-1 flex flex-col gap-4 text-base font-semibold">
+      <a href="index.html" class="p-3 rounded-lg text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+        <span>Home</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </a>
+      <a href="about.html" class="p-3 rounded-lg bg-brand-50 text-brand flex items-center justify-between">
+        <span>About Us</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </a>
+      <a href="contact.html" class="p-3 rounded-lg text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+        <span>Contact & Hours</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </a>
+      <a href="refill.html" class="p-3 rounded-lg text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+        <span>Refill Prescription</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </a>
+
+      <div class="mt-6 pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <a href="refill.html" class="btn-primary py-3 rounded-xl text-center text-sm font-bold shadow-soft">
+          Refill Prescription Online
+        </a>
+        <a href="tel:+16123543851" class="btn-secondary py-3 rounded-xl text-center text-sm font-bold">
+          Call: (612) 354-3851
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    
+    <!-- ABOUT HERO WITH AMBIENT BACKGROUND GLOW -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-white via-brand-50/30 to-slate-50 py-16 sm:py-20 border-b border-slate-200/80 bg-ambient-mesh">
+      <div class="glow-orb glow-orb-primary w-[500px] h-[500px] -top-20 -left-20"></div>
+      <div class="glow-orb glow-orb-accent w-[450px] h-[450px] top-10 -right-20"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+        <div class="max-w-3xl space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white shadow-soft-sm border border-brand-100 text-brand text-xs font-bold tracking-wide">
+            Our Story & Community Purpose
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight">
+            Healthcare rooted in community, care, and uncompromising standards.
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Cedar Pharmacy was founded to bring heartfelt, independent pharmacy care back to Minneapolis. We believe your pharmacist should know your name, understand your health history, and advocate for your wellness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VALUES -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand">The Cedar Philosophy</span>
+            <h2 class="text-3xl font-extrabold text-slate-950 tracking-tight">
+              A healthcare partner who takes the time to listen.
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-base">
+              In a landscape increasingly dominated by massive corporate chains with long lines, disconnected call centers, and rushed interactions, Cedar Pharmacy is proudly different.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-base">
+              Located conveniently on Cedar Avenue in Minneapolis, we combine cutting-edge pharmaceutical dispensing technology with old-fashioned neighborhood hospitality. When you have questions regarding medication side effects, interactions, or insurance coverage, our pharmacists take the time to explain everything clearly.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-brand-50/60 border border-brand-100 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Patient Data Privacy & Security</h4>
+                <p class="text-xs text-slate-600 mt-1">We maintain strict HIPAA compliance and secure digital encryption across all patient records and refill requests.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <!-- Value 1 -->
+              <div class="p-6 rounded-2xl border border-slate-200/80 bg-slate-50/50 shadow-soft">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-brand flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Precision & Accuracy</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Every dose is verified using dual-pharmacist checks and digital verification counters.</p>
+              </div>
+
+              <!-- Value 2 -->
+              <div class="p-6 rounded-2xl border border-slate-200/80 bg-slate-50/50 shadow-soft">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Patient-First Care</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">We treat you as a neighbor and community member, never just another Rx label.</p>
+              </div>
+
+              <!-- Value 3 -->
+              <div class="p-6 rounded-2xl border border-slate-200/80 bg-slate-50/50 shadow-soft">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Speed & Convenience</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Rapid prescription turnarounds, easy curbside pickup, and local home delivery options.</p>
+              </div>
+
+              <!-- Value 4 -->
+              <div class="p-6 rounded-2xl border border-slate-200/80 bg-slate-50/50 shadow-soft">
+                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Community Inclusion</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Serving a diverse neighborhood with respect, cultural understanding, and language support.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PATIENT-FOCUSED APPROACH DEEP DIVE -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand">How We Serve You</span>
+          <h2 class="text-3xl font-extrabold text-slate-950 tracking-tight">
+            Our Patient-Focused Care Model
+          </h2>
+          <p class="text-slate-600 text-sm">
+            Everything at Cedar Pharmacy is designed to make managing your health seamless, stress-free, and affordable.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand flex items-center justify-center font-black text-lg mb-6">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Prescription Synchronization</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Tired of multiple trips to the pharmacy every month? We align all of your monthly refills so you can pick them up on one single scheduled date every 30 or 90 days.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand flex items-center justify-center font-black text-lg mb-6">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Direct Doctor Coordination</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              When a prescription needs an authorized refill or prior authorization from your doctor, our staff directly contacts your clinic so you don't have to spend hours on hold.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-soft">
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand flex items-center justify-center font-black text-lg mb-6">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Multilingual Patient Support</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Cedar Ave is home to a rich and vibrant community. We take pride in offering patient consultations and instruction in multiple languages to ensure every patient feels comfortable.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHARMACY SERVICES SNAPSHOT -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="bg-gradient-to-r from-brand to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-soft-lg">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <span class="text-xs font-bold uppercase tracking-widest text-blue-200">Clinical Capabilities</span>
+              <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+                Everything you need under one clean, trusted roof.
+              </h2>
+              <p class="text-blue-100 text-sm sm:text-base leading-relaxed max-w-2xl">
+                Whether you need everyday maintenance medications, seasonal vaccinations, diabetes test supplies, or a comprehensive review of complex drug therapies, Cedar Pharmacy is equipped to serve you.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                <span class="px-3 py-1 rounded-full bg-white/10 text-white font-semibold">&check; Flu & COVID-19 Vaccines</span>
+                <span class="px-3 py-1 rounded-full bg-white/10 text-white font-semibold">&check; Electronic Rx Intake</span>
+                <span class="px-3 py-1 rounded-full bg-white/10 text-white font-semibold">&check; Medicare Part D Support</span>
+                <span class="px-3 py-1 rounded-full bg-white/10 text-white font-semibold">&check; Free Curbside Pickup</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+              <a href="refill.html" class="btn-primary bg-white text-brand hover:bg-slate-100 py-3.5 px-6 rounded-xl font-bold text-center text-sm shadow-soft">
+                Refill Prescription
+              </a>
+              <a href="contact.html" class="border border-white/40 hover:border-white text-white py-3.5 px-6 rounded-xl font-bold text-center text-sm transition-colors">
+                Contact Our Team
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & VISITING SECTION -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-soft flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1">
+            <span class="text-xs font-bold uppercase text-brand tracking-wide">Come Say Hello</span>
+            <h3 class="text-xl font-bold text-slate-900">Conveniently located in the heart of Minneapolis</h3>
+            <p class="text-sm text-slate-600">417 Cedar Ave, Minneapolis, MN 55454 &bull; Open Monday–Saturday 9:00 AM – 7:00 PM</p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="contact.html" class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold">
+              View Map & Directions
+            </a>
+            <a href="tel:+16123543851" class="btn-secondary px-5 py-2.5 rounded-xl text-xs font-bold">
+              Call (612) 354-3851
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/ceder_logo_png.png" alt="Cedar Pharmacy" class="h-10 w-auto object-contain rounded-lg bg-white/95 p-1 shadow-soft-sm">
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Your neighborhood community pharmacy in Minneapolis, MN. Providing patient-centered medication management, fast refills, immunizations, and healthcare consultation.
+          </p>
+          <div class="pt-1">
+            <div data-pharmacy-status class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-800">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 status-indicator-dot"></span>
+              <span>Checking Hours...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <p class="font-bold text-white text-xs uppercase tracking-wider">Navigation</p>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Our Pharmacy</a></li>
+            <li><a href="refill.html" class="hover:text-white transition-colors">Refill Prescription</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <p class="font-bold text-white text-xs uppercase tracking-wider">Services</p>
+          <ul class="space-y-2 text-xs">
+            <li><a href="refill.html" class="hover:text-white transition-colors">Prescription Refill Request</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Vaccinations & Flu Shots</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Prescription Transfer</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">Medication Therapy Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <p class="font-bold text-white text-xs uppercase tracking-wider">Contact & Address</p>
+          <div class="text-xs space-y-2">
+            <p class="text-slate-300">417 Cedar Ave<br>Minneapolis, MN 55454<br>United States</p>
+            <p><a href="tel:+16123543851" class="text-blue-400 hover:underline font-semibold">+1 612-354-3851</a></p>
+            <p class="text-slate-500 pt-1">Mon–Sat: 9 AM–7 PM &bull; Sun: Closed</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 Cedar Pharmacy. All rights reserved. Licensed Pharmacy in the State of Minnesota.</p>
+        <p class="text-slate-500">Cedar Pharmacy &bull; 417 Cedar Ave, Minneapolis, MN 55454</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
