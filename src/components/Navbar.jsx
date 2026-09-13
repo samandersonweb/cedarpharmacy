@@ -54,6 +54,7 @@ export default function Navbar() {
     { name: 'Home', path: '/', icon: Home },
     { name: 'About Us', path: '/about', icon: Building2 },
     { name: 'Services', path: '/services', icon: Stethoscope },
+    { name: 'Refill', path: '/refill', icon: Pill },
     { name: 'Contact & Map', path: '/contact', icon: MapPin },
   ];
 
@@ -102,19 +103,19 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               to="/refill"
-              className="group relative inline-flex items-center gap-3 p-1.5 pr-3 rounded-xl bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_16px_-2px_rgba(9,46,150,0.4)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_8px_24px_-2px_rgba(9,46,150,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="group relative inline-flex items-center gap-3 p-1.5 pr-3.5 rounded-xl bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_16px_-2px_rgba(9,46,150,0.4)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_8px_24px_-2px_rgba(9,46,150,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               {/* Luminous Shimmer Sheen Sweep */}
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
 
               {/* Left Chamber: Apothecary Seal Key */}
               <span className="w-7 h-7 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center shadow-inner group-hover:bg-white group-hover:text-[#092E96] group-hover:scale-105 transition-all duration-300 shrink-0 text-white">
-                <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                <Pill className="w-3.5 h-3.5 stroke-[2.5]" />
               </span>
 
               {/* Center: Bespoke Typography */}
               <span className="text-[12px] font-bold tracking-[0.03em] text-white drop-shadow-xs">
-                Transfer Prescription
+                Refill Prescription
               </span>
 
               {/* Right: Trailing Micro Arrow */}
@@ -129,12 +130,12 @@ export default function Navbar() {
             <Link
               to="/refill"
               className="group relative inline-flex items-center gap-2 p-1 pr-2.5 rounded-lg bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/30 shadow-xs active:scale-95 transition-all overflow-hidden"
-              aria-label="Transfer Prescription"
+              aria-label="Refill Prescription"
             >
               <span className="w-6 h-6 rounded-md bg-white/15 border border-white/25 flex items-center justify-center text-white shrink-0">
-                <Plus className="w-3 h-3 stroke-[2.5]" />
+                <Pill className="w-3 h-3 stroke-[2.5]" />
               </span>
-              <span className="text-[11px] font-bold tracking-tight text-white">Transfer Rx</span>
+              <span className="text-[11px] font-bold tracking-tight text-white">Refill Rx</span>
               <ArrowRight className="w-3 h-3 text-blue-200" />
             </Link>
 
@@ -253,11 +254,11 @@ export default function Navbar() {
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#092E96] transition-all">
-                      <Plus className="w-4 h-4 stroke-[2.5]" />
+                      <Pill className="w-4 h-4 stroke-[2.5]" />
                     </div>
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-blue-200">Express Online Intake</p>
-                      <p className="text-sm font-bold text-white">Transfer Prescription</p>
+                      <p className="text-sm font-bold text-white">Refill Prescription</p>
                     </div>
                   </div>
                   <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-white group-hover:bg-white/25 transition-all">

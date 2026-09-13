@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <Link to="/refill" className="text-slate-400 hover:text-white transition-colors inline-flex items-center gap-1.5 group">
                   <ArrowRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  Transfer Prescription
+                  Refill Prescription
                 </Link>
               </li>
               <li>

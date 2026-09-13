@@ -8,7 +8,11 @@ import {
   CheckCircle2,
   Building2,
   ShieldCheck,
-  Printer
+  Printer,
+  Navigation,
+  Car,
+  Bus,
+  ExternalLink
 } from 'lucide-react';
 import { useToast } from '../components/Toast';
 
@@ -244,6 +248,89 @@ export default function ContactPage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* 3. INTERACTIVE MAP & DIRECTIONS SECTION */}
+      <section className="py-12 sm:py-16 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+              
+              {/* Left Details & Transit Info */}
+              <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/70 text-xs font-bold uppercase tracking-wider text-[#092E96] mb-3">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Getting Here</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Visit Our Minneapolis Pharmacy
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed">
+                    Conveniently located at 417 Cedar Avenue in the historic Cedar-Riverside neighborhood of Minneapolis, easily reached by car, train, bus, or on foot.
+                  </p>
+
+                  <div className="mt-6 space-y-4 text-xs text-slate-700">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#092E96] flex items-center justify-center shrink-0 mt-0.5">
+                        <Navigation className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <strong className="text-slate-900 block font-bold">Cedar-Riverside Location</strong>
+                        <p className="text-slate-600 mt-0.5">417 Cedar Ave, Minneapolis, MN 55454</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                        <Car className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <strong className="text-slate-900 block font-bold">Storefront & Curbside Parking</strong>
+                        <p className="text-slate-600 mt-0.5">Dedicated parking spaces in front with full wheelchair accessibility and curbside pickup.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+                        <Bus className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <strong className="text-slate-900 block font-bold">Metro Transit Accessible</strong>
+                        <p className="text-slate-600 mt-0.5">Close to the METRO Blue & Green Cedar-Riverside stations and direct bus stops right outside.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=417+Cedar+Ave+Minneapolis+MN+55454"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-xl text-xs font-bold text-white bg-[#092E96] hover:bg-[#061F69] shadow-sm hover:shadow transition-all group"
+                  >
+                    <span>Open Directions in Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Interactive Google Map */}
+              <div className="lg:col-span-7 bg-slate-100 min-h-[380px] lg:min-h-[460px] relative border-t lg:border-t-0 lg:border-l border-slate-200">
+                <iframe
+                  title="Cedar Pharmacy Location Map"
+                  className="w-full h-full min-h-[380px] lg:min-h-[460px] border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://maps.google.com/maps?q=417+Cedar+Ave,+Minneapolis,+MN+55454&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                />
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 

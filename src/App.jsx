@@ -24,9 +24,14 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/about.html" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services.html" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contact.html" element={<ContactPage />} />
             <Route path="/refill" element={<RefillPage />} />
+            <Route path="/refill.html" element={<RefillPage />} />
+            <Route path="/transfer" element={<RefillPage initialMode="transfer" />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
