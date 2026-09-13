@@ -10,7 +10,8 @@ import {
   Phone, 
   CheckCircle2, 
   Clock, 
-  ArrowRight 
+  ArrowRight,
+  Plus
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -112,10 +113,23 @@ export default function AboutPage() {
               <div className="pt-2">
                 <Link
                   to="/refill"
-                  className="w-full py-3 px-4 rounded-lg text-sm font-bold text-white bg-[#092E96] hover:bg-[#061F69] flex items-center justify-center gap-2 transition-colors"
+                  className="group relative w-full inline-flex items-center justify-between p-2 pr-4 rounded-xl bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_6px_20px_-2px_rgba(9,46,150,0.4)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_10px_28px_-2px_rgba(9,46,150,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 overflow-hidden"
                 >
-                  <span>Refill or Transfer Prescriptions</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
+                  <span className="w-8 h-8 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center shadow-inner group-hover:bg-white group-hover:text-[#092E96] group-hover:scale-105 transition-all duration-300 shrink-0 text-white">
+                    <Plus className="w-4 h-4 stroke-[2.5]" />
+                  </span>
+                  <div className="text-left flex-1 px-3">
+                    <span className="text-[9px] font-black uppercase tracking-[0.16em] text-blue-200 block leading-none mb-0.5">
+                      Fast 1-Min Service
+                    </span>
+                    <span className="text-sm font-extrabold tracking-tight text-white block">
+                      Refill or Transfer Prescriptions
+                    </span>
+                  </div>
+                  <span className="w-7 h-7 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-blue-100 group-hover:bg-white/25 group-hover:text-white transition-all duration-300 shrink-0">
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </span>
                 </Link>
               </div>
             </div>
@@ -131,12 +145,25 @@ export default function AboutPage() {
           <p className="text-sm text-blue-100 max-w-xl mx-auto">
             417 Cedar Ave, Minneapolis, MN 55454. We are ready to assist you.
           </p>
-          <div className="pt-2 flex justify-center gap-4">
+          <div className="pt-2 flex justify-center">
             <Link
               to="/contact"
-              className="px-6 py-3 rounded-lg text-xs font-bold text-[#092E96] bg-white hover:bg-slate-100 transition-colors"
+              className="group relative inline-flex items-center gap-3 p-2 pr-5 rounded-xl bg-gradient-to-b from-white to-slate-50 text-slate-900 border border-white/80 shadow-[inset_0_1px_0_rgba(255,255,255,1),0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 overflow-hidden"
             >
-              Get Location & Hours
+              <span className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-[#092E96] group-hover:bg-[#092E96] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0">
+                <MapPin className="w-4 h-4" />
+              </span>
+              <div className="text-left">
+                <span className="text-[9px] font-black uppercase tracking-[0.16em] text-slate-400 group-hover:text-[#092E96]/70 block leading-none mb-0.5 transition-colors">
+                  Minneapolis Dispensary
+                </span>
+                <span className="text-sm font-extrabold tracking-tight text-slate-900 group-hover:text-[#092E96] block transition-colors">
+                  Get Location & Hours
+                </span>
+              </div>
+              <span className="w-7 h-7 rounded-lg bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-600 group-hover:bg-[#092E96] group-hover:text-white transition-all duration-300 shrink-0 ml-1">
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </Link>
           </div>
         </div>

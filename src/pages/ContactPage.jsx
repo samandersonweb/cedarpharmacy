@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send, 
-  CheckCircle2, 
-  Building2, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  CheckCircle2,
+  Building2,
   ShieldCheck,
   Printer
 } from 'lucide-react';
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex-grow bg-[#F8FAFC] text-slate-900">
-      
+
       {/* HERO */}
       <section className="relative py-14 sm:py-20 border-b border-slate-200 bg-gradient-to-b from-white via-slate-50 to-blue-50/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center space-y-3">
@@ -70,10 +70,10 @@ export default function ContactPage() {
       {/* CONTENT GRID */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Left Column: Contact Cards & Info */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
               <h2 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">
                 Pharmacy Location & Details

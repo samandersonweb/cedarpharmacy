@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { 
-  Phone, 
-  Pill, 
-  Menu, 
-  X, 
-  ChevronRight, 
-  Home, 
-  Building2, 
-  Stethoscope, 
-  MapPin, 
-  Clock, 
-  ArrowRight
+import {
+  Phone,
+  Pill,
+  Menu,
+  X,
+  ChevronRight,
+  Home,
+  Building2,
+  Stethoscope,
+  MapPin,
+  Clock,
+  ArrowRight,
+  ArrowUpRight,
+  Plus
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -85,10 +87,9 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150 flex items-center gap-2 ${
-                    isActive
-                      ? 'bg-blue-50 text-[#092E96] font-bold shadow-2xs'
-                      : 'text-slate-700 hover:text-[#092E96] hover:bg-slate-100/80'
+                  `px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150 flex items-center gap-2 ${isActive
+                    ? 'bg-blue-50 text-[#092E96] font-bold shadow-2xs'
+                    : 'text-slate-700 hover:text-[#092E96] hover:bg-slate-100/80'
                   }`
                 }
               >
@@ -97,14 +98,29 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop Action CTA */}
+          {/* Desktop Action CTA - The Luminous Apothecary Prism Button */}
           <div className="hidden md:flex items-center gap-3">
             <Link
               to="/refill"
-              className="px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[#092E96] hover:bg-[#061F69] shadow-xs hover:shadow-sm active:scale-[0.98] transition-all duration-150 flex items-center gap-2"
+              className="group relative inline-flex items-center gap-3 p-1.5 pr-3 rounded-xl bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_16px_-2px_rgba(9,46,150,0.4)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_8px_24px_-2px_rgba(9,46,150,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              <Pill className="w-4 h-4 text-sky-200" />
-              <span>Transfer Prescription</span>
+              {/* Luminous Shimmer Sheen Sweep */}
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
+
+              {/* Left Chamber: Apothecary Seal Key */}
+              <span className="w-7 h-7 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center shadow-inner group-hover:bg-white group-hover:text-[#092E96] group-hover:scale-105 transition-all duration-300 shrink-0 text-white">
+                <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+              </span>
+
+              {/* Center: Bespoke Typography */}
+              <span className="text-[12px] font-bold tracking-[0.03em] text-white drop-shadow-xs">
+                Transfer Prescription
+              </span>
+
+              {/* Right: Trailing Micro Arrow */}
+              <span className="w-5 h-5 rounded-md bg-white/10 flex items-center justify-center text-blue-100 group-hover:bg-white/25 group-hover:text-white transition-all duration-300 shrink-0">
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </Link>
           </div>
 
@@ -112,17 +128,20 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <Link
               to="/refill"
-              className="inline-flex items-center gap-1.5 bg-[#092E96] hover:bg-[#061F69] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xs active:scale-95 transition-all"
+              className="group relative inline-flex items-center gap-2 p-1 pr-2.5 rounded-lg bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/30 shadow-xs active:scale-95 transition-all overflow-hidden"
               aria-label="Transfer Prescription"
             >
-              <Pill className="w-3.5 h-3.5 text-sky-200" />
-              <span>Transfer Rx</span>
+              <span className="w-6 h-6 rounded-md bg-white/15 border border-white/25 flex items-center justify-center text-white shrink-0">
+                <Plus className="w-3 h-3 stroke-[2.5]" />
+              </span>
+              <span className="text-[11px] font-bold tracking-tight text-white">Transfer Rx</span>
+              <ArrowRight className="w-3 h-3 text-blue-200" />
             </Link>
 
             <a
               href="tel:+16123543851"
               aria-label="Call Cedar Pharmacy"
-              className="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 hover:text-[#092E96] hover:bg-blue-50 active:scale-95 transition-all flex items-center justify-center border border-slate-200/60"
+              className="w-9 h-9 rounded-full bg-slate-100 text-slate-700 hover:text-[#092E96] hover:bg-blue-50 transition-colors flex items-center justify-center border border-slate-200/80"
             >
               <Phone className="w-4 h-4 text-[#092E96]" />
             </a>
@@ -132,7 +151,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Navigation Menu"
               aria-expanded={mobileMenuOpen}
-              className="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 hover:text-[#092E96] hover:bg-slate-200 active:scale-95 transition-all flex items-center justify-center border border-slate-200/60 focus:outline-none focus:ring-2 focus:ring-[#092E96]"
+              className="w-9 h-9 rounded-full bg-slate-100 text-slate-700 hover:text-[#092E96] hover:bg-slate-200 transition-colors flex items-center justify-center border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-[#092E96]"
             >
               <Menu className="w-5 h-5" />
             </button>
@@ -144,17 +163,15 @@ export default function Navbar() {
       {/* PORTAL-RENDERED MOBILE DRAWER (Bypasses all sticky / backdrop-filter traps) */}
       {mounted && createPortal(
         <div
-          className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${
-            mobileMenuOpen ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
-          }`}
+          className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${mobileMenuOpen ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+            }`}
         >
           {/* Backdrop */}
           <div
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
-            className={`fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 ${
-              mobileMenuOpen ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-100' : 'opacity-0'
+              }`}
           />
 
           {/* Drawer Panel */}
@@ -162,9 +179,8 @@ export default function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-label="Mobile Navigation"
-            className={`fixed top-0 right-0 bottom-0 w-[88vw] max-w-sm h-full bg-white text-slate-900 z-10 border-l border-slate-200 shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${
-              mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-            }`}
+            className={`fixed top-0 right-0 bottom-0 w-[88vw] max-w-sm h-full bg-white text-slate-900 z-10 border-l border-slate-200 shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
           >
             {/* Drawer Header */}
             <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50 shrink-0">
@@ -205,10 +221,9 @@ export default function Navbar() {
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
                         className={({ isActive }) =>
-                          `p-3.5 rounded-xl text-base font-semibold flex items-center justify-between transition-all duration-150 ${
-                            isActive
-                              ? 'bg-blue-50 text-[#092E96] font-bold border-l-4 border-[#092E96]'
-                              : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
+                          `p-3.5 rounded-xl text-base font-semibold flex items-center justify-between transition-all duration-150 ${isActive
+                            ? 'bg-blue-50 text-[#092E96] font-bold border-l-4 border-[#092E96]'
+                            : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
                           }`
                         }
                       >
@@ -233,35 +248,38 @@ export default function Navbar() {
                 <Link
                   to="/refill"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-3.5 rounded-xl bg-[#092E96] text-white shadow-sm hover:bg-[#061F69] active:scale-[0.98] transition-all flex items-center justify-between group"
+                  className="group relative p-3.5 rounded-xl bg-gradient-to-r from-[#0D38B5] via-[#092E96] to-[#061F66] text-white border border-blue-400/35 shadow-md transition-all flex items-center justify-between overflow-hidden"
                 >
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
-                      <Pill className="w-4 h-4 text-sky-200" />
+                    <div className="w-8 h-8 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#092E96] transition-all">
+                      <Plus className="w-4 h-4 stroke-[2.5]" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-white leading-tight">Transfer Prescription</p>
-                      <p className="text-[11px] text-sky-200">Online Rx transfer intake</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-blue-200">Express Online Intake</p>
+                      <p className="text-sm font-bold text-white">Transfer Prescription</p>
                     </div>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-sky-200 group-hover:translate-x-0.5 transition-transform" />
+                  <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-white group-hover:bg-white/25 transition-all">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
                 </Link>
 
                 {/* Call Pharmacist */}
                 <a
                   href="tel:+16123543851"
-                  className="p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 active:scale-[0.98] transition-all flex items-center justify-between"
+                  className="group p-3.5 rounded-xl bg-gradient-to-b from-white to-slate-50 border border-slate-200/90 text-slate-900 transition-all flex items-center justify-between shadow-xs hover:border-blue-300"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-[#092E96]/10 flex items-center justify-center shrink-0">
-                      <Phone className="w-4 h-4 text-[#092E96]" />
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-100 text-[#092E96] flex items-center justify-center shrink-0 group-hover:bg-[#092E96] group-hover:text-white transition-all">
+                      <Phone className="w-4 h-4" />
                     </div>
                     <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Direct Pharmacist</p>
                       <p className="text-sm font-bold text-slate-900 leading-tight">(612) 354-3851</p>
-                      <p className="text-[11px] text-slate-500">Direct pharmacist line</p>
                     </div>
                   </div>
-                  <span className="text-[11px] font-semibold text-[#092E96] bg-blue-50 px-2 py-0.5 rounded border border-blue-200/60">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#092E96] bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200/60">
                     Call
                   </span>
                 </a>

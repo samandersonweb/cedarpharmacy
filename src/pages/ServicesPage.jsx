@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Pill, 
-  Syringe, 
-  Repeat, 
-  ShoppingBag, 
-  Truck, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  Pill,
+  Syringe,
+  Repeat,
+  ShoppingBag,
+  Truck,
+  ArrowRight,
+  CheckCircle2,
   Stethoscope,
   Sparkles,
   Phone,
@@ -110,7 +110,7 @@ export default function ServicesPage() {
 
   return (
     <div className="flex-grow bg-[#F8FAFC] text-slate-900 min-h-screen">
-      
+
       {/* HEADER HERO */}
       <section className="relative py-14 sm:py-20 overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-white via-slate-50 to-blue-50/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 text-center">
@@ -135,8 +135,8 @@ export default function ServicesPage() {
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div 
-                key={service.id} 
+              <div
+                key={service.id}
                 id={service.id}
                 className="bg-white rounded-xl p-7 border border-slate-200 shadow-xs hover:border-[#092E96]/40 transition-all flex flex-col justify-between group"
               >
